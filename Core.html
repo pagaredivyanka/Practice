@@ -1,0 +1,144 @@
+<!-- page2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8e8e8;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 250px;
+            position: relative;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .line-item {
+            margin-bottom: 10px;
+            cursor: default; /* Change cursor to default for line items */
+        }
+        .checkbox {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page 2</h1>
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <h3>Card 1</h3>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link1"> <label for="link1">Link 1</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link2"> <label for="link2">Link 2</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link3"> <label for="link3">Link 3</label>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h3>Card 2</h3>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link4"> <label for="link4">Link 4</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link5"> <label for="link5">Link 5</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link6"> <label for="link6">Link 6</label>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h3>Card 3</h3>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link7"> <label for="link7">Link 7</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link8"> <label for="link8">Link 8</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link9"> <label for="link9">Link 9</label>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h3>Card 4</h3>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link10"> <label for="link10">Link 10</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link11"> <label for="link11">Link 11</label>
+            </div>
+            <div class="line-item">
+                <input type="checkbox" class="checkbox" id="link12"> <label for="link12">Link 12</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home button -->
+    <a href="index.html" class="button">Go to Home Page</a>
+
+    <script>
+        // Function to save checkbox states to localStorage
+        function saveCheckboxState(checkboxId) {
+            const checkbox = document.getElementById(checkboxId);
+            localStorage.setItem(checkboxId, checkbox.checked);
+        }
+
+        // Function to load checkbox states from localStorage
+        function loadCheckboxState(checkboxId) {
+            const checkbox = document.getElementById(checkboxId);
+            const checked = localStorage.getItem(checkboxId) === 'true';
+            checkbox.checked = checked;
+        }
+
+        // Add event listeners to all checkboxes to save their state when changed
+        document.querySelectorAll('.checkbox').forEach(checkbox => {
+            loadCheckboxState(checkbox.id); // Load the saved state on page load
+            checkbox.addEventListener('change', () => {
+                saveCheckboxState(checkbox.id);
+            });
+        });
+
+        // Prevent checking checkboxes when clicking on the label
+        document.querySelectorAll('.line-item label').forEach(label => {
+            label.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default action
+            });
+        });
+    </script>
+</body>
+</html>
