@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #373737;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/* Default Light Theme */
+body.light {
+    background-color: #f0f0f0;
+    color: #000;
+    
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Container Styling */
+.container {
+    position: absolute;
+    top: 18px;
+    right: 120px;
+    padding: 5px 5px;
+}
+
+/* Toggle Switch Styling */
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+h1{
+    color: rgb(255, 216, 19);
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card {
+    background-color: #9c9c9c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Applying z-index */
+}
+.button {
+    display: block;
+    padding: 14px 18px;
+    background-color: #facc35;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease-in-out;
+   
+    
+}
+.button:hover {
+    background-color: #caa21c;
+    transform: scale(1.02);
+    text-transform: scale(1.02);
+}
+
+#logout{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 5px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 6, 6);
+    border-radius: 5px;
+} 
+
+hr{
+    width: 100%;
+    margin-top: 20px;
+    background-color: #000000;
+}
+
+footer {
+    padding: 6px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4px;
+}
+
+
+
+
+

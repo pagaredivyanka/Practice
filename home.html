@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js" defer></script>
+</head>
+<body>
+    
+    <div class="container">
+        <label class="theme-toggle">
+            <input type="checkbox" id="themeToggle" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <button type="reset" id="logout" onclick="logout()">Logout</button>
+    <h1>Practice!</h1>
+    <div class="card">
+        <h2>Navigate to</h2>
+        <a href="Java/Java.html" class="button">Java</a>
+        <a href="Aptitude/Apti.html" class="button">Aptitude</a>
+        <a href="Core/Core.html" class="button">Core Subjects</a>
+        <a href="Project/project.html" class="button">Projects</a>
+    </div>
+    <hr id="hr" style="width: auto">
+
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+            window.location.href = "index.html"; // Redirect to the login page
+        }
+    </script>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Divyanka Pagare. All rights reserved. </p>
+        </div>
+    </footer>
+
+</body>
+</html>
