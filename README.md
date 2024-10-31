@@ -1,2 +1,3 @@
 # practice
-https://pagaredivyanka.github.io/practice/
+https://pagaredivyanka.github.io/practice-website/
+
